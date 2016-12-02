@@ -1,0 +1,249 @@
+{
+  "name": "Process Flow Diagram Definition",
+  "uri": "http://pfdn",
+  "associations": [],
+  "types": [
+    {
+      "name": "Base",
+      "isAbstract": true,
+      "properties": [
+        {
+          "name": "id",
+          "type": "String",
+          "isAttr": true,
+          "isId": true
+        }
+      ]
+    },
+    {
+      "name": "Coordinates",
+      "properties": [
+        {
+          "name": "x",
+          "type": "Real",
+          "isAttr": true,
+          "default": 0
+        },
+        {
+          "name": "y",
+          "type": "Real",
+          "isAttr": true,
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "Zoom",
+      "properties": [
+        {
+          "name": "offset",
+          "type": "Coordinates",
+          "default": {
+            "x": 0, "y": 0, "scale": 2
+          }
+        },
+        {
+          "name": "scale",
+          "type": "Real",
+          "default": 1
+        }
+      ]
+    },
+    {
+      "name": "Grid",
+      "properties": [
+        {
+          "name": "show",
+          "type": "Boolean",
+          "isAttr": true,
+          "default": true
+        },
+        {
+          "name": "color",
+          "type": "String",
+          "isAttr": true,
+          "default": "#ddd"
+        },
+        {
+          "name": "size",
+          "type": "Real",
+          "isAttr": true,
+          "default": 25
+        },
+        {
+          "name": "lineWidth",
+          "type": "Real",
+          "isAttr": true,
+          "default": 1
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "properties": [
+        {
+          "name": "name",
+          "type": "String",
+          "default": "No Name"
+        },
+        {
+          "name": "author",
+          "type": "String",
+          "default": "No Author"
+        },
+        {
+          "name": "backgroundColor",
+          "type": "String",
+          "default": "transparent"
+        },
+        {
+          "name": "zoom",
+          "type": "Zoom"
+        },
+        {
+          "name": "grid",
+          "type": "Grid"
+        }
+      ]
+    },
+    {
+      "name": "Label",
+      "properties": [
+        {
+          "name": "position",
+          "type": "Coordinates"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "default": "Label1"
+        },
+        {
+          "name": "color",
+          "type": "String",
+          "isAttr": true,
+          "default": "black"
+        },
+        {
+          "name": "fontSize",
+          "type": "Real",
+          "isAttr": true,
+          "default": 16
+        }
+      ]
+    },
+    {
+      "name": "Node",
+      "superClass": [ "Base" ],
+      "properties": [
+        {
+          "name": "label",
+          "type": "Label"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "isAttr": true,
+          "default": "default"
+        },
+        {
+          "name": "position",
+          "type": "Coordinates"
+        },
+        {
+          "name": "size",
+          "type": "Real",
+          "isAttr": true,
+          "default": 25
+        }
+      ]
+    },
+    {
+      "name": "Zone",
+      "superClass": [ "Base" ],
+      "properties": [
+        {
+          "name": "label",
+          "type": "Label"
+        },
+        {
+          "name": "position",
+          "type": "Coordinates"
+        },
+        {
+          "name": "size",
+          "type": "Real",
+          "default": 25
+        }
+      ]
+    },
+    {
+      "name": "Link",
+      "superClass": [ "Base" ],
+      "properties": [
+        {
+          "name": "label",
+          "type": "Label"
+        },
+        {
+          "name": "source",
+          "type": "String",
+          "isAttr": true,
+          "isReference": true
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "isAttr": true,
+          "isReference": true
+        },
+        {
+          "name": "color",
+          "type": "String",
+          "isAttr": true,
+          "default": "blue"
+        },
+        {
+          "name": "waypoint",
+          "type": "Coordinates",
+          "isMany": true
+        }
+      ]
+    },
+    {
+      "name": "Diagram",
+      "superClass": [ "Base" ],
+      "properties": [
+        {
+          "name": "settings",
+          "type": "Settings"
+        },
+        {
+          "name": "node",
+          "type": "Node",
+          "isMany": true
+        },
+        {
+          "name": "link",
+          "type": "Link",
+          "isMany": true
+        },
+        {
+          "name": "labels",
+          "type": "Label",
+          "isMany": true
+        },
+        {
+          "name": "zones",
+          "type": "Zone",
+          "isMany": true
+        }
+      ]
+    }
+  ],
+  "prefix": "pfdn",
+  "xml": {
+    "tagAlias": "lowerCase",
+    "typePrefix": "t"
+  }
+}

@@ -1,20 +1,18 @@
-# bpmn-moddle
+# pfdn-moddle
 
-[![Build Status](https://travis-ci.org/bpmn-io/bpmn-moddle.svg?branch=master)](https://travis-ci.org/bpmn-io/bpmn-moddle)
+Read and write Process Flow Diagram files in NodeJS and the browser.
 
-Read and write BPMN 2.0 diagram files in NodeJS and the browser.
-
-__bpmn-moddle__ uses the [BPMN 2.0 meta-model](http://www.omg.org/spec/BPMN/2.0/) to validate the input and produce correct BPMN 2.0 XML. The library is built on top of [moddle](https://github.com/bpmn-io/moddle) and [moddle-xml](https://github.com/bpmn-io/moddle-xml).
+__pfdn-moddle__ uses a custom notation to validate the input and produce Process Flow Diagrams (PFD) in XML. The library is built on top of [moddle](https://github.com/bpmn-io/moddle) and [moddle-xml](https://github.com/bpmn-io/moddle-xml).
 
 
 ## Usage
 
-Get the library via [npm package](https://www.npmjs.org/package/bpmn-moddle). Bundle it for the web using [browserify](http://browserify.org) or [webpack](https://webpack.github.io).
+Get the library via `npm install davcs86/pfdn-moddle`. Bundle it for the web using [browserify](http://browserify.org) or [webpack](https://webpack.github.io).
 
 ```javascript
-var BpmnModdle = require('bpmn-moddle');
+var PfdnModdle = require('pfdn-moddle');
 
-var moddle = new BpmnModdle();
+var moddle = new PfdnModdle();
 
 var xmlStr =
   '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -43,8 +41,8 @@ moddle.fromXML(xmlStr, function(err, definitions) {
 
 ## Resources
 
-*   [Issues](https://github.com/bpmn-io/bpmn-moddle/issues)
-*   [Examples](https://github.com/bpmn-io/bpmn-moddle/tree/master/test/spec/xml)
+*   [Issues](https://github.com/davcs86/pfdn-moddle/issues)
+*   [Examples](https://github.com/davcs86/pfdn-moddle/tree/master/test/spec/xml)
 
 
 ## Building the Project

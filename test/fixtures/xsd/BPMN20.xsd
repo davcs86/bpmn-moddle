@@ -6,9 +6,9 @@
   xmlns:vendor="http://vendor"
   targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL">
 
-  <xsd:import namespace="http://www.omg.org/spec/BPMN/20100524/DI" schemaLocation="../../../resources/bpmn/xsd/BPMNDI.xsd"/>
+  <xsd:import namespace="http://www.omg.org/spec/BPMN/20100524/DI" schemaLocation="../../../resources/pfdn/xsd/BPMNDI.xsd"/>
   <xsd:import namespace="http://vendor" schemaLocation="Vendor.xsd"/>
-  <xsd:include schemaLocation="../../../resources/bpmn/xsd/Semantic.xsd"/>
+  <xsd:include schemaLocation="../../../resources/pfdn/xsd/Semantic.xsd"/>
 
   <xsd:element name="definitions" type="tDefinitions"/>
   <xsd:complexType name="tDefinitions">
