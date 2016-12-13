@@ -59,7 +59,7 @@
           "default": true
         },
         {
-          "name": "color",
+          "name": "lineColor",
           "type": "String",
           "isAttr": true,
           "default": "#ddd"
@@ -159,6 +159,23 @@
       ]
     },
     {
+      "name": "Border",
+      "properties": [
+        {
+          "name": "lineWidth",
+          "type": "Real",
+          "isAttr": true,
+          "default": 1
+        },
+        {
+          "name": "lineColor",
+          "type": "String",
+          "isAttr": true,
+          "default": "#ddd"
+        }
+      ]
+    },
+    {
       "name": "Zone",
       "superClass": [ "Base" ],
       "properties": [
@@ -171,9 +188,32 @@
           "type": "Coordinates"
         },
         {
-          "name": "size",
+          "name": "width",
           "type": "Real",
+          "isAttr": true,
           "default": 25
+        },
+        {
+          "name": "height",
+          "type": "Real",
+          "isAttr": true,
+          "default": 25
+        },
+        {
+          "name": "fillColor",
+          "type": "String",
+          "isAttr": true,
+          "default": "#ddd"
+        },
+        {
+          "name": "opacity",
+          "type": "Real",
+          "isAttr": true,
+          "default": 0.6
+        },
+        {
+          "name": "border",
+          "type": "Border"
         }
       ]
     },
@@ -198,10 +238,22 @@
           "isReference": true
         },
         {
-          "name": "color",
+          "name": "lineColor",
           "type": "String",
           "isAttr": true,
-          "default": "blue"
+          "default": "black"
+        },
+        {
+          "name": "lineWidth",
+          "type": "Real",
+          "isAttr": true,
+          "default": 4
+        },
+        {
+          "name": "fillColor",
+          "type": "String",
+          "isAttr": true,
+          "default": "white"
         },
         {
           "name": "waypoint",
@@ -229,12 +281,12 @@
           "isMany": true
         },
         {
-          "name": "labels",
+          "name": "label",
           "type": "Label",
           "isMany": true
         },
         {
-          "name": "zones",
+          "name": "zone",
           "type": "Zone",
           "isMany": true
         }
@@ -243,7 +295,6 @@
   ],
   "prefix": "pfdn",
   "xml": {
-    "tagAlias": "lowerCase",
-    "typePrefix": "t"
+    "tagAlias": "lowerCase"
   }
 }
