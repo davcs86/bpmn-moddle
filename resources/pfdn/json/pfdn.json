@@ -108,6 +108,7 @@
     },
     {
       "name": "Label",
+      "superClass": [ "Base" ],
       "properties": [
         {
           "name": "position",
@@ -138,7 +139,9 @@
       "properties": [
         {
           "name": "label",
-          "type": "Label"
+          "type": "Label",
+          "isAttr": true,
+          "isReference": true
         },
         {
           "name": "type",
@@ -181,7 +184,9 @@
       "properties": [
         {
           "name": "label",
-          "type": "Label"
+          "type": "Label",
+          "isAttr": true,
+          "isReference": true
         },
         {
           "name": "position",
@@ -223,7 +228,9 @@
       "properties": [
         {
           "name": "label",
-          "type": "Label"
+          "type": "Label",
+          "isAttr": true,
+          "isReference": true
         },
         {
           "name": "source",
