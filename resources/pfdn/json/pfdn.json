@@ -117,7 +117,7 @@
         {
           "name": "text",
           "type": "String",
-          "default": "Label1"
+          "default": "Label"
         },
         {
           "name": "color",
