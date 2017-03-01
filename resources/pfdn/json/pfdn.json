@@ -94,7 +94,7 @@
         {
           "name": "backgroundColor",
           "type": "String",
-          "default": "transparent"
+          "default": "white"
         },
         {
           "name": "zoom",
