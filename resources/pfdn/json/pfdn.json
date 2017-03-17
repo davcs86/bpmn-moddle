@@ -115,6 +115,12 @@
           "type": "Coordinates"
         },
         {
+          "name": "isReadOnly",
+          "type": "Boolean",
+          "isAttr": true,
+          "default": false
+        },
+        {
           "name": "text",
           "type": "String",
           "default": "Label"
