@@ -135,7 +135,7 @@
           "name": "fontSize",
           "type": "Real",
           "isAttr": true,
-          "default": 16
+          "default": 13
         }
       ]
     },
