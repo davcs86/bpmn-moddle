@@ -62,7 +62,7 @@
           "name": "lineColor",
           "type": "String",
           "isAttr": true,
-          "default": "#ddd"
+          "default": "#dddddd"
         },
         {
           "name": "size",
@@ -94,7 +94,7 @@
         {
           "name": "backgroundColor",
           "type": "String",
-          "default": "white"
+          "default": "#ffffff"
         },
         {
           "name": "zoom",
@@ -129,7 +129,7 @@
           "name": "color",
           "type": "String",
           "isAttr": true,
-          "default": "black"
+          "default": "#000000"
         },
         {
           "name": "fontSize",
@@ -180,7 +180,7 @@
           "name": "lineColor",
           "type": "String",
           "isAttr": true,
-          "default": "#ddd"
+          "default": "#dddddd"
         }
       ]
     },
@@ -214,7 +214,7 @@
           "name": "fillColor",
           "type": "String",
           "isAttr": true,
-          "default": "#ddd"
+          "default": "#dddddd"
         },
         {
           "name": "opacity",
@@ -254,7 +254,7 @@
           "name": "lineColor",
           "type": "String",
           "isAttr": true,
-          "default": "black"
+          "default": "#000000"
         },
         {
           "name": "lineWidth",
@@ -266,7 +266,7 @@
           "name": "fillColor",
           "type": "String",
           "isAttr": true,
-          "default": "white"
+          "default": "#ffffff"
         },
         {
           "name": "waypoint",
