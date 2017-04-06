@@ -43,11 +43,12 @@
     "jsondiffpatch": "^0.1.4",
     "load-grunt-tasks": "^0.3.0",
     "mocha": "^3.1.2",
-    "xsd-schema-validator": "^0.3.0"
-  },
-  "dependencies": {
+    "xsd-schema-validator": "^0.3.0",
     "lodash": "^4.17.4",
     "moddle": "^0.8.0",
     "moddle-xml": "^0.12.0"
+  },
+  "dependencies": {
+
   }
 }

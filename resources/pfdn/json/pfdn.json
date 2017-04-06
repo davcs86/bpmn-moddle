@@ -12,6 +12,14 @@
           "type": "String",
           "isAttr": true,
           "isId": true
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "tag",
+          "type": "String"
         }
       ]
     },
