@@ -20,6 +20,49 @@
         {
           "name": "tag",
           "type": "String"
+        },
+        {
+          "name": "propertiesSet",
+          "type": "PropertiesSet",
+          "isAttr": true,
+          "isReference": true
+        }
+      ]
+    },
+    {
+      "name": "Property",
+      "properties": [
+        {
+          "name": "name",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "isAttr": true,
+          "default": "string"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "isAttr": true,
+          "default": ""
+        }
+      ]
+    },
+    {
+      "name": "PropertiesSet",
+      "properties": [
+        {
+          "name": "id",
+          "type": "String",
+          "isAttr": true,
+          "isId": true
+        }, {
+          "name": "property",
+          "type": "Property",
+          "isMany": true
         }
       ]
     },
@@ -310,6 +353,12 @@
           "name": "zone",
           "type": "Zone",
           "isMany": true
+        },
+        {
+          "name": "propertiesSet",
+          "type": "PropertiesSet",
+          "isMany": true,
+          "redefines": "pfdn:Diagram#propertiesSet"
         }
       ]
     }
