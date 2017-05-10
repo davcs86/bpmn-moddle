@@ -18,16 +18,6 @@
           "type": "String"
         },
         {
-          "name": "tag",
-          "type": "String"
-        },
-        {
-          "name": "propertiesSet",
-          "type": "PropertiesSet",
-          "isAttr": true,
-          "isReference": true
-        },
-        {
           "name": "status",
           "type": "Real",
           "isAttr": true,
@@ -137,21 +127,19 @@
     },
     {
       "name": "Settings",
+      "superClass": [ "Base" ],
       "properties": [
-        {
-          "name": "name",
-          "type": "String",
-          "default": "No Name"
-        },
         {
           "name": "author",
           "type": "String",
-          "default": "No Author"
+          "default": "No Author",
+          "isAttr": true
         },
         {
           "name": "backgroundColor",
           "type": "String",
-          "default": "#ffffff"
+          "default": "#ffffff",
+          "isAttr": true
         },
         {
           "name": "zoom",
@@ -179,14 +167,13 @@
         },
         {
           "name": "text",
-          "type": "String",
-          "default": "Label"
+          "type": "String"
         },
         {
           "name": "color",
           "type": "String",
           "isAttr": true,
-          "default": "#000000"
+          "default": "#303030"
         },
         {
           "name": "fontSize",
@@ -211,6 +198,17 @@
           "type": "String",
           "isAttr": true,
           "default": "default"
+        },
+        {
+          "name": "tag",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "propertiesSet",
+          "type": "PropertiesSet",
+          "isAttr": true,
+          "isReference": true
         },
         {
           "name": "position",
@@ -329,6 +327,17 @@
           "name": "waypoint",
           "type": "Coordinates",
           "isMany": true
+        },
+        {
+          "name": "tag",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "propertiesSet",
+          "type": "PropertiesSet",
+          "isAttr": true,
+          "isReference": true
         }
       ]
     },
@@ -363,8 +372,7 @@
         {
           "name": "propertiesSet",
           "type": "PropertiesSet",
-          "isMany": true,
-          "redefines": "pfdn:Diagram#propertiesSet"
+          "isMany": true
         }
       ]
     }
