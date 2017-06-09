@@ -4,19 +4,9 @@
   "associations": [],
   "types": [
     {
-      "name": "Base",
+      "name": "Statusable",
       "isAbstract": true,
       "properties": [
-        {
-          "name": "id",
-          "type": "String",
-          "isAttr": true,
-          "isId": true
-        },
-        {
-          "name": "name",
-          "type": "String"
-        },
         {
           "name": "status",
           "type": "Real",
@@ -26,7 +16,30 @@
       ]
     },
     {
+      "name": "Base",
+      "isAbstract": true,
+      "superClass": [
+        "Statusable"
+      ],
+      "properties": [
+        {
+          "name": "id",
+          "type": "String",
+          "isAttr": true,
+          "isId": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isAttr": true
+        }
+      ]
+    },
+    {
       "name": "Property",
+      "superClass": [
+        "Statusable"
+      ],
       "properties": [
         {
           "name": "name",
@@ -49,16 +62,23 @@
     },
     {
       "name": "PropertiesSet",
+      "superClass": [
+        "Statusable"
+      ],
       "properties": [
         {
           "name": "id",
           "type": "String",
           "isAttr": true,
           "isId": true
-        }, {
+        },
+        {
           "name": "property",
           "type": "Property",
-          "isMany": true
+          "isMany": true,
+          "xml": {
+            "serialize": "xsi:type"
+          }
         }
       ]
     },
@@ -81,12 +101,20 @@
     },
     {
       "name": "Zoom",
+      "superClass": [
+        "Statusable"
+      ],
       "properties": [
         {
           "name": "offset",
           "type": "Coordinates",
           "default": {
-            "x": 0, "y": 0, "scale": 2
+            "x": 0,
+            "y": 0,
+            "scale": 2
+          },
+          "xml": {
+            "serialize": "xsi:type"
           }
         },
         {
@@ -127,7 +155,9 @@
     },
     {
       "name": "Settings",
-      "superClass": [ "Base" ],
+      "superClass": [
+        "Base"
+      ],
       "properties": [
         {
           "name": "author",
@@ -143,21 +173,32 @@
         },
         {
           "name": "zoom",
-          "type": "Zoom"
+          "type": "Zoom",
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "grid",
-          "type": "Grid"
+          "type": "Grid",
+          "xml": {
+            "serialize": "xsi:type"
+          }
         }
       ]
     },
     {
       "name": "Label",
-      "superClass": [ "Base" ],
+      "superClass": [
+        "Base"
+      ],
       "properties": [
         {
           "name": "position",
-          "type": "Coordinates"
+          "type": "Coordinates",
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "isReadOnly",
@@ -185,7 +226,9 @@
     },
     {
       "name": "Node",
-      "superClass": [ "Base" ],
+      "superClass": [
+        "Base"
+      ],
       "properties": [
         {
           "name": "label",
@@ -212,7 +255,10 @@
         },
         {
           "name": "position",
-          "type": "Coordinates"
+          "type": "Coordinates",
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "size",
@@ -241,7 +287,9 @@
     },
     {
       "name": "Zone",
-      "superClass": [ "Base" ],
+      "superClass": [
+        "Base"
+      ],
       "properties": [
         {
           "name": "label",
@@ -251,7 +299,10 @@
         },
         {
           "name": "position",
-          "type": "Coordinates"
+          "type": "Coordinates",
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "width",
@@ -279,13 +330,18 @@
         },
         {
           "name": "border",
-          "type": "Border"
+          "type": "Border",
+          "xml": {
+            "serialize": "xsi:type"
+          }
         }
       ]
     },
     {
       "name": "Link",
-      "superClass": [ "Base" ],
+      "superClass": [
+        "Base"
+      ],
       "properties": [
         {
           "name": "label",
@@ -326,7 +382,10 @@
         {
           "name": "waypoint",
           "type": "Coordinates",
-          "isMany": true
+          "isMany": true,
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "tag",
@@ -343,36 +402,56 @@
     },
     {
       "name": "Diagram",
-      "superClass": [ "Base" ],
+      "superClass": [
+        "Base"
+      ],
       "properties": [
         {
           "name": "settings",
-          "type": "Settings"
+          "type": "Settings",
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "node",
           "type": "Node",
-          "isMany": true
+          "isMany": true,
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "link",
           "type": "Link",
-          "isMany": true
+          "isMany": true,
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "label",
           "type": "Label",
-          "isMany": true
+          "isMany": true,
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "zone",
           "type": "Zone",
-          "isMany": true
+          "isMany": true,
+          "xml": {
+            "serialize": "xsi:type"
+          }
         },
         {
           "name": "propertiesSet",
           "type": "PropertiesSet",
-          "isMany": true
+          "isMany": true,
+          "xml": {
+            "serialize": "xsi:type"
+          }
         }
       ]
     }
