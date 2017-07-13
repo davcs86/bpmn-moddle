@@ -31,8 +31,8 @@
   "devDependencies": {
     "chai": "^1.9.1",
     "cmof-parser": "^0.1.0",
-    "eslint": "^3.11.1",
-    "eslint-loader": "^1.6.1",
+    "eslint": "^4.2.0",
+    "eslint-loader": "^1.9.0",
     "grunt": "^0.4.2",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.7.2",
@@ -42,13 +42,11 @@
     "json-loader": "^0.5.4",
     "jsondiffpatch": "^0.1.4",
     "load-grunt-tasks": "^0.3.0",
-    "mocha": "^3.1.2",
-    "xsd-schema-validator": "^0.3.0",
     "lodash": "^4.17.4",
+    "mocha": "^3.1.2",
     "moddle": "^0.8.0",
-    "moddle-xml": "^0.12.0"
+    "moddle-xml": "^0.12.0",
+    "xsd-schema-validator": "^0.3.0"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
